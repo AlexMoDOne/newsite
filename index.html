@@ -1,0 +1,68 @@
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/frappe-gantt.css">
+    <link rel="stylesheet" href="lib/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg id="gantt"></svg>
+    <button data-target="modal1" class="btn modal-trigger">Добавить задачу</button>
+    <!-- <div id="gantt-diagramm"></div> -->
+    <!-- <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque labore dicta, expedita quasi tempora maiores. Molestiae a incidunt, inventore facilis, animi est mollitia odit nulla culpa molestias obcaecati atque id?</div> -->
+    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col s12">
+                    <ul id="tabs" class="tabs">
+                        <li class="tab col s6"><a href="#edit-task">Изменить задачу</a></li>
+                        <li class="tab col s6"><a href="#add-task">Добавить задачу</a></li>
+                    </ul>
+                </div>
+                <div id="edit-task" class="col s12">
+                    <div class="input-field col s12">
+                        <select id="task-edit-select">
+                        </select>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="name-edit" type="text" class="validate">
+                        <label for="name-edit">Название задачи</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="end-date" type="text" class="datepicker">
+                        <label for="end-date">Дата окончания</label>
+                    </div>
+                    <form action="#" class="col s12">
+                        <p class="range-field">
+                        <label for="progress-edit">Прогресс работ</label>
+                            <input type="range" id="progress-edit" min="0" max="100" />
+                        </p>
+                    </form>
+                </div>
+
+                <div id="add-task" class="col s12">
+                    <div class="input-field col s6">
+                        <input id="name-add" type="text" class="validate">
+                        <label for="name-add">Название задачи</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" id="closeModal" class="modal-close waves-effect waves-light btn">Сохранить</a>
+        </div>
+    </div>
+
+    <script src="lib/nouislider.js"></script>
+    <script src="lib/materialize.min.js"></script>
+    <script src="lib/frappe-gantt.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
