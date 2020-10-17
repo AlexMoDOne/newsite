@@ -41,11 +41,20 @@
 }
 
 .gantt .bar {
-  fill: #b8c2cc;
-  stroke: #8D99A6;
   stroke-width: 0;
   transition: stroke-width .3s ease;
   user-select: none;
+}
+
+.bar.dark {
+  fill: #b8c2cc;
+  stroke: #8D99A6;
+}
+
+.bar.light {
+  
+  fill: #5dca90;
+  stroke: #3dc390;
 }
 
 .gantt .bar-progress {
