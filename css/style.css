@@ -95,3 +95,12 @@ h6 {
 .container-fluid {
 		width: 100%;
 }
+
+.header {
+		display: grid;
+		justify-content: left;
+		grid-template-columns: auto auto;
+		align-items: center;
+		column-gap: 10px;
+		margin-left: 10px;
+}

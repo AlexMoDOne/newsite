@@ -10,8 +10,19 @@
 </head>
 
 <body>
+    <div class="header">
+        <button data-target="modal1" class="btn modal-trigger">Управление задачами</button>
+        <div class="input-field">
+            <select id="visible-select">
+                <option value="Day">Показывать в днях</option>
+                <option value="Week">Показывать в неделях</option>
+                <option value="Month">Показывать в месяцах</option>
+            </select>
+        </div>
+    </div>
+    </div>
+
     <svg id="gantt"></svg>
-    <button data-target="modal1" class="btn modal-trigger">Добавить задачу</button>
     <!-- <div id="gantt-diagramm"></div> -->
     <!-- <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque labore dicta, expedita quasi tempora maiores. Molestiae a incidunt, inventore facilis, animi est mollitia odit nulla culpa molestias obcaecati atque id?</div> -->
     <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
@@ -29,18 +40,19 @@
                     <div class="input-field col s12">
                         <select id="task-edit-select">
                         </select>
+                        <label for="task-edit-select">Доступные задачи</label>
                     </div>
                     <div class="input-field col s6">
                         <input id="name-edit" type="text" class="validate">
                         <label for="name-edit">Название задачи</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="end-date" type="text" class="datepicker">
-                        <label for="end-date">Дата окончания</label>
+                        <input id="end-edit-date" type="text" class="datepicker">
+                        <label for="end-edit-date">Дата окончания</label>
                     </div>
                     <form action="#" class="col s12">
                         <p class="range-field">
-                        <label for="progress-edit">Прогресс работ</label>
+                            <label for="progress-edit">Прогресс работ</label>
                             <input type="range" id="progress-edit" min="0" max="100" />
                         </p>
                     </form>
@@ -50,6 +62,20 @@
                     <div class="input-field col s6">
                         <input id="name-add" type="text" class="validate">
                         <label for="name-add">Название задачи</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <select id="task-add-select" multiple>
+                        </select>
+                        <label for="task-add-select">Пренадлежит</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="start-add-date" type="text" class="datepicker">
+                        <label for="start-add-date">Дата старта</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="end-add-date" type="text" class="datepicker">
+                        <label for="end-add-date">Дата окончания</label>
                     </div>
                 </div>
             </div>
