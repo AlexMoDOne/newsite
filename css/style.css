@@ -98,7 +98,7 @@ h6 {
 
 .header {
 		display: grid;
-		grid-template-columns: 1fr 1fr 3fr 1fr;
+		grid-template-columns: 1fr 4fr 1fr;
 		align-items: center;
 		column-gap: 10px;
 		margin-left: 10px;
