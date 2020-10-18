@@ -420,29 +420,29 @@ visible_select.addEventListener("change", function () {
 });
 
 
-var result_select = document.getElementById("result-select");
-document.addEventListener('DOMContentLoaded', function () {
-    M.FormSelect.init(result_select, {});
+// var result_select = document.getElementById("result-select");
+// document.addEventListener('DOMContentLoaded', function () {
+//     M.FormSelect.init(result_select, {});
 
-});
+// });
 
-result_select.addEventListener("change", function () {
-    switch (result_select.selectedOptions[0].value) {
-        case "1":
-            this_tasks = tasks1;
-            break;
-        case "2":
-            this_tasks = tasks2;
-            break;
-        case "3":
-            this_tasks = tasks3;
-            break;
-        default:
-            break;
-    }
-    gantt.refresh(this_tasks);
-    // gantt.change_view_mode(result_select.selectedOptions[0].value);
-});
+// result_select.addEventListener("change", function () {
+//     switch (result_select.selectedOptions[0].value) {
+//         case "1":
+//             this_tasks = tasks1;
+//             break;
+//         case "2":
+//             this_tasks = tasks2;
+//             break;
+//         case "3":
+//             this_tasks = tasks3;
+//             break;
+//         default:
+//             break;
+//     }
+//     gantt.refresh(this_tasks);
+//     // gantt.change_view_mode(result_select.selectedOptions[0].value);
+// });
 
 
 var index_add_select = task_add_select.selectedIndex;
@@ -462,10 +462,7 @@ function createTask(s, e, d) {
     };
 }
 
-document.getElementById("parse").onclick = function(){
-    this_tasks = JSON.parse(document.getElementById("json-edit").value);
-    gantt.refresh(this_tasks);
-}
+
 
 document.getElementById("closeModal").onclick = function () {
 
@@ -484,6 +481,11 @@ document.getElementById("closeModal").onclick = function () {
     gantt.refresh(this_tasks);
     task_edit_select = initSelect("task-edit-select");
     task_add_select = initSelect("task-add-select")
+}
+
+document.getElementById("parse").onclick = function(){
+    this_tasks = JSON.parse(document.getElementById("json-edit").value);
+    gantt.refresh(this_tasks);
 }
 
 var option_picker = {
