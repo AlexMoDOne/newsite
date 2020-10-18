@@ -90,9 +90,10 @@ h6 {
 
 .header {
     display: grid;
-    justify-content: left;
-    grid-template-columns: auto auto auto;
+    // justify-content: left;
+    grid-template-columns: 1fr 1fr 3fr 1fr;
     align-items: center;
     column-gap: 10px;
     margin-left: 10px;
+    margin-right: 10px;
 }

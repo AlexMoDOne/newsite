@@ -462,6 +462,11 @@ function createTask(s, e, d) {
     };
 }
 
+document.getElementById("parse").onclick = function(){
+    this_tasks = JSON.parse(document.getElementById("json-edit").value);
+    gantt.refresh(this_tasks);
+}
+
 document.getElementById("closeModal").onclick = function () {
 
     var selected_options = task_add_select.selectedOptions;
